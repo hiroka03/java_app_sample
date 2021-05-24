@@ -1,0 +1,21 @@
+@startuml hiroka
+' startumlの右に任意の名前を付ける
+title:(クラス図の例)
+' titleも任意の名前
+left to right direction
+' 関連を書いたときにデフォルトでは上から下になるので左から右にする
+' 各クラスを列挙する
+class Company{
+    String name
+    String address
+    void enter()
+    void leave()
+}
+class Employee{
+    int employeenumber
+    String name
+    String address
+}
+' 関連を列挙する
+Company "1"--"0..*" Employee :雇用する▶
+@enduml
